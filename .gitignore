@@ -1,0 +1,90 @@
+# ==============================================================================
+# LedgerFlow .gitignore
+# ==============================================================================
+
+# ─── Node / Dependencies ──────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json.bak
+
+# ─── Android Build Outputs & Intermediates ────────────────────────────────────
+android/app/build/
+android/build/
+android/.gradle/
+android/.cxx/
+**/build/
+.gradle/
+*.apk
+*.aab
+*.ap_
+output-metadata.json
+
+# ─── Local Environment & SDK Config (machine-specific) ────────────────────────
+android/local.properties
+**/local.properties
+local.properties
+
+# ─── Secrets, Keystores & Private Keys ───────────────────────────────────────
+# Release keystores must NEVER be committed.
+# The debug.keystore below is the standard Android SDK default (password: android)
+# and is safe to include so the project builds out-of-the-box for contributors.
+*.keystore
+*.jks
+*.p12
+*.key
+*.pem
+*.cer
+*.der
+!android/app/debug.keystore
+
+# ─── Environment Variables & Secret Files ────────────────────────────────────
+.env
+.env.*
+!.env.example
+keystore.properties
+release.keystore.properties
+
+# ─── IDEs & Editors ──────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+
+# ─── Operating System Files ──────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── Metro & React Native Bundles ────────────────────────────────────────────
+.metro-health-check*
+*.jsbundle
+.metro/
+
+# ─── TypeScript ──────────────────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ─── Logs & Temporary Files ──────────────────────────────────────────────────
+*.log
+scratch/
+temp/
+tmp/
+
+# ─── Fastlane ────────────────────────────────────────────────────────────────
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# ─── Dev/Internal Artifacts (not meant for public repo) ─────────────────────
+app_preview.html

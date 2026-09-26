@@ -1,0 +1,24 @@
+# Normalize line endings: LF in repo, checkout as-is on all platforms
+* text=auto eol=lf
+
+# Force LF for shell scripts (must stay LF for Linux/macOS CI runners)
+*.sh text eol=lf
+gradlew text eol=lf
+
+# Force CRLF for Windows batch files
+*.bat text eol=crlf
+gradlew.bat text eol=crlf
+
+# Binary files — don't touch line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.keystore binary
+*.jks binary
+*.jar binary
+*.p12 binary
+*.apk binary
+*.aab binary
+*.gradle.kts binary
